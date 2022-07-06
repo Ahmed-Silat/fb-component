@@ -1,21 +1,24 @@
 import React from "react";
 import FbImageLibrary from "react-fb-image-grid";
-import CustomBtn from "../components/customBtn";
+import "./newsFeed.css";
+// import CustomBtn from "../components/customBtn";
 function NewsFeed(props) {
   return (
-    <div>
-      <div>
-        <img src={props.profilePic} />
-        <p>{props.name}</p>
-        <p>{props.date}</p>
+    <div className="main">
+      <div className="user-details">
+        <div>
+          <img src={props.profilePic} className="profile-pic" />
+        </div>
+        <div className="user-info">
+          <p className="user-name">{props.name}</p>
+          <p className="date">{props.date}</p>
+        </div>
       </div>
-      <div>
-        <FbImageLibrary images={props.pictures} />
-        <CustomBtn title={props.title} />
+      <div className="image-library">
+        <img src="https://www.w3schools.com/howto/img_forest.jpg" />
+        {/* <FbImageLibrary images={props.pictures} /> */}
+        {/* <CustomBtn title={props.title} /> */}
       </div>
-      {/* <div>
-        
-      </div> */}
     </div>
   );
 }

@@ -2,11 +2,15 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import NewsFeed from "./screen/newsFeed";
-// import CustomBtn from "./components/customBtn";
+import CustomBtn from "./components/customBtn";
+import "./screen/newsFeed.css";
+import LikeImage from "./assets/images/1.PNG";
+import CommentImage from "./assets/images/2.PNG";
+import ShareImage from "./assets/images/3.PNG";
 
 function App() {
   // const userName = prompt("Enter your Name");
-  const time = Date.now();
+  const time = new Date().toLocaleDateString();
   return (
     <div className="App">
       <header className="App-header">
@@ -26,9 +30,11 @@ function App() {
           ]}
           title={"Like"}
         />
-        {/* <div>
-          <CustomBtn title={"like"} />
-        </div> */}
+        <div className="buttons">
+          <CustomBtn title={"like"} image={LikeImage} />
+          <CustomBtn title={"comment"} image={CommentImage} />
+          <CustomBtn title={"share"} image={ShareImage} />
+        </div>
       </header>
     </div>
   );
